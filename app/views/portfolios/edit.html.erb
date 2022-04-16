@@ -1,5 +1,7 @@
 <h1>Edit Portfolio</h1>
 
+<%= link_to "Volver", portfolios_path %>
+
 <%= form_with(model: @portfolio) do |form| %>
   <div>
     <%= form.label :title, style: "display: block" %>
