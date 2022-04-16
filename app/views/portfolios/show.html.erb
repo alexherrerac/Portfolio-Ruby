@@ -1,0 +1,8 @@
+<h1>Show <%= @portfolio.title %></h1>
+
+<%= link_to "Volver", portfolios_path %>
+
+<p><%= @portfolio.title %></p>
+<p><%= @portfolio.subtitle %></p>
+<p><%= @portfolio.body %></p>
+<%= link_to "Edit", edit_portfolio_path(@portfolio.id) %>
