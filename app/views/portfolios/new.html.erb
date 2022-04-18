@@ -19,6 +19,14 @@
   </div>
 
   <div>
+    <ul>
+      <% form.fields_for :technologies %>
+        <li><%= form.check_box :technologies, technology.name %> <%= technology.name %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
