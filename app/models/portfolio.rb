@@ -11,7 +11,7 @@ class Portfolio < ApplicationRecord
         where(subtitle: "Angular")
     end
 
-    # forma 2
+    # forma 2 asasasassasasasas
     scope :ruby_on_rails_portfolio_items, -> { where(subtitle: "Ruby on Rails") }
 
     after_initialize :set_defaults
