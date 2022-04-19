@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :portfolios, except: [:show]
   get 'portfolio/angular', to: 'portfolios#angular', as: 'portfolio_angular'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
