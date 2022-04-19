@@ -20,8 +20,11 @@
 
   <div>
     <ul>
-      <% form.fields_for :technologies %>
-        <li><%= form.check_box :technologies, technology.name %> <%= technology.name %></li>
+      <%= form.fields_for :technologies do |technology_form| %>
+        <li>
+          <%= technology_form.label :name %>
+          <%= technology_form.text_field :name %>
+        </li>
       <% end %>
     </ul>
   </div>
