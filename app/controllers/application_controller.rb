@@ -18,10 +18,18 @@ class ApplicationController < ActionController::Base
     end
     ########
 
-
     # include CurrentUserConcern
     def current_user
         super || OpenStruct.new(name: "Guest")
+    end
+    ########
+
+    # include DefaultPageContent
+    before_filter :set_page_title
+    
+    def set_page_title
+        @page_title = "Alexander Portfolio | My Portfolio Website"
+        @seo_keywords = "Alexander Herrera Portfolio"
     end
     ########
 end
