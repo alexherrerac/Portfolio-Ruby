@@ -2,9 +2,8 @@
 
 <%= link_to "Volver", portfolios_path %>
 
-<p><%= @portfolio.title %></p>
-<p><%= @portfolio.subtitle %></p>
-<p><%= @portfolio.body %></p>
+<%= render @portfolio %>
+<%# <%= render partial: 'portfolio_name', collection: @portfolio_name %> %>
 
 <h2>Technologies used:</h2>
 

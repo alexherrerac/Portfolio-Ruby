@@ -1,6 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @blog %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="4">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @blog %>
+  </tbody>
+</table>
 
 <div>
   <%= link_to "Edit this blog", edit_blog_path(@blog) %> |
