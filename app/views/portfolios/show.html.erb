@@ -11,13 +11,4 @@
     <p><%= tech.name %></p>
 <% end %>
 
-<hr>
-
-<%= params.inspect %>
-
-<hr>
-
-<%= session.inspect %>
-
-
-<%= link_to "Edit", edit_portfolio_path(@portfolio.id) %>
+<%= link_to "Edit", edit_portfolio_path(@portfolio.id) if logged_in?(:site_admin) %>

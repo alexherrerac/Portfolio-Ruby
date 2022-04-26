@@ -6,6 +6,6 @@
 
 <%#= image_tag portfolio.thumb_image unless portfolio.thumb_image.nil? %>
 
-<%= link_to "Edit", edit_portfolio_path(portfolio) %>
+<%= link_to "Edit", edit_portfolio_path(portfolio) if logged_in?(:site_admin) %>
 
-<%= button_to "Destroy", portfolio, method: :delete %>
+<%= button_to "Destroy", portfolio, method: :delete if logged_in?(:site_admin) %>
